@@ -1,0 +1,11 @@
+#title-bar{
+    background-color: grey;
+    padding-bottom: 10px;
+    padding-top: 10px;
+}
+
+.title{
+    font-family: sans-serif;
+    color: white;
+    text-align: center;
+}
