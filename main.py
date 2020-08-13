@@ -1,6 +1,7 @@
 import numpy as np #Math Library
 import pandas as pd #Data Processing Library
 import matplotlib.pyplot as plt #Data Visualisation Library
+from mpld3.display import display_d3
 import seaborn as sns #Additional Data Visualisation Library
 from sklearn.cluster import KMeans #Clustering Library
 
@@ -73,4 +74,4 @@ plt.xlabel("Annual Income ($)")
 plt.ylabel("Spending Score (1-100)")
 plt.legend()
 
-plt.show()
+display_d3(plt.show())
