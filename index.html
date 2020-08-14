@@ -1,16 +1,80 @@
-<!DOCTYPE html>
-<html>
-<head>
-    <meta charset="utf-8">
-    <title>K-Means Visualisation</title>
-    <link rel="stylesheet" type="text/css" href="main.css">
-    <script src="https://d3js.org/d3.v5.min.js"></script>
-    <script src="test.js" defer> </script>
+<!doctype html>
+<html lang="en">
+
+    <head>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+	<meta http-equiv="content-type" content="text/html; charset=utf-8" />
+	<title>Visualizing K-Means algorithm with D3.js - TECH-NI Blog</title>
+	<link rel="stylesheet" href="screen.css" type="text/css" />
+	<link rel="shortcut icon" type="image/x-icon" href="/favicon.ico" />
+	<meta property="og:title" content="Visualizing K-Means algorithm with D3.js"/>
+	<meta property="og:url" content="http://tech.nitoyon.com/en/blog/2013/11/07/k-means/"/>
+	<meta property="og:type" content="article"/>
+	<meta property="og:description" content="The K-Means algorithm is a popular and simple clustering algorithm. This visualization shows you how it works.Step RestartN (the number of node):K (the number of cluster):NewClick figure or push [Step] button to go to next step.Push [Restart] button to go..."/>
+	<meta property="og:image" content="http://farm8.staticflickr.com/7316/10710273026_68972312f0_o.jpg"/>
+	<meta property="og:site_name" content="TECH-NI Blog"/>
+	<meta property="fb:admins" content="1297551349" />
+	<meta name="viewport" content="width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no">
 </head>
-<body>
-    <div id="title-bar">
-        <h1 class="title">K-Means Viusaliser</h1>
-    </div>
-    <div id="my_dataviz"></div>
+<body class="en">
+<div class="wrap">
+<div class="wrapped">
+
+
+<article>
+<header>
+<h1>Visualizing K-Means algorithm with D3.js</h1>
+</header>
+
+<div class="entry-body">
+<section>
+<p>The K-Means algorithm is a popular and simple clustering algorithm. This visualization shows you how it works. Full credit for the original post <a href="http://tech.nitoyon.com/en/blog/2013/11/07/k-means/">here</a></p>
+
+<div id="kmeans">
+<div><svg></svg></div>
+<div><input type="checkbox" name="manual" onchange="javascript: manual(this);"/>Place Starting Positions Manually</div>
+<div><button id="step">Step</button> <button id="restart" disabled>Restart</button> <button id="run">Run</button></div>
+<fieldset style="display: inline; margin: .8em 0 1em 0; border: 1px solid #999; padding: .5em">
+<div><label for="N">N (the number of node):</label><input type="number" id="N" min="2" max="1000" value="100"></div>
+<div><label for="K">K (the number of cluster):</label><input type="number" id="K" min="2" max="50" value="5"></div>
+<div><label for="C">Draw Centroids: </label><input type="checkbox" id="centroids" onchange="javascript:centroids(this);"></div>
+<div><button id="reset">New</button></div>
+</fieldset>
+</div>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/d3/3.5.6/d3.js" charset="utf-8"></script>
+
+<script src="k-means.js"></script>
+
+<ul>
+<li>Click figure or push [Step] button to go to next step.</li>
+<li>Push [Restart] button to go back to initialization step.</li>
+<li>Push [New] button to start new simulation with given <i>N</i> (the number of nodes) and <i>K</i> (the number of clusters).</li>
+<li>Requires modern browsers (tested on IE 10, Firefox 25 and Chrome 30).</li>
+</ul>
+
+<h1>What is K-Means</h1>
+
+<p>You can find a detail description at <a href="http://en.wikipedia.org/wiki/K-means_clustering">k-means clustering - Wikipedia, the free encyclopedia</a>, but it&#39;s too complecated to understand.</p>
+
+<p>Here is simpler steps:</p>
+
+<ol>
+<li><em>Initialization:</em> Create <i>N</i> nodes (circle) and randomly put initial <i>K</i> cluster (cross).</li>
+<li><em>Assignment step:</em> Assign each node (circle) to the nearest cluster (cross).</li>
+<li><em>Update step:</em> Each cluster (cross) move to the centroid of its nodes.</li>
+<li>Go to step 2.</li>
+</ol>
+
+</div>
+
+
+</article>
+
+</div>
+</div>
+
+
+
 </body>
 </html>
