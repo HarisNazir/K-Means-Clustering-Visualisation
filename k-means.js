@@ -45,7 +45,7 @@ d3.select("#reset")
 .on('click', function() { init(); draw(); });
 var groups_old = [];
 var groups = [], dots = [];
-firstRun = true;
+var firstRun = true;
 var inter;
 function startRun() {
     $("#run").prop("disabled", true);
@@ -109,7 +109,7 @@ function init() {
     } else {
         d3.select("#kmeans svg").on("click", function() {
             if (placed < K && manualPlacement) {
-                coords = d3.mouse(this);
+                var coords = d3.mouse(this);
                 groups.push(place(placed, K, coords[0], coords[1]));
                 draw();
                 placed++;
@@ -130,7 +130,7 @@ function init() {
 }
 function pushRands(N) {
     dots = []
-    for (i = 0; i < N; i++) {
+    for (var i = 0; i < N; i++) {
             var dot = {
                 x: Math.random() * WIDTH,
                 y: Math.random() * HEIGHT,
@@ -148,16 +148,16 @@ function pushRands(N) {
 
 function pushCentroids(N, K) {
     dots = [];
-    for (i = 0; i < K; i++) {
+    for (var i = 0; i < K; i++) {
         var cX = Math.random() * WIDTH;
         var cY = Math.random() * HEIGHT;
         var cW = getRandomArbitrary(50,125);
         var cH = getRandomArbitrary(50,125);
-        for (j = 0; j < N/K; j++) {
-                rX = Math.random() * cW;
-                x = cX + ((cX + rX < WIDTH) ? rX : -1 * rX);
-                rY = Math.random() * cH;
-                y = cY + ((cY + rY < HEIGHT) ? rY : -1 * rY);
+        for (var j = 0; j < N/K; j++) {
+                var rX = Math.random() * cW;
+                var x = cX + ((cX + rX < WIDTH) ? rX : -1 * rX);
+                var rY = Math.random() * cH;
+                var y = cY + ((cY + rY < HEIGHT) ? rY : -1 * rY);
             var dot = {
                 x: x,/*(Math.random() * WIDTH/K) + cX,*/
                 y: y, /*(Math.random() * HEIGHT/K) + cY,*/
