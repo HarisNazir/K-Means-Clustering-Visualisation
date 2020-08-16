@@ -1,0 +1,151 @@
+@charset "UTF-8";
+html, body, div, h1, h2, center,fieldset, label, caption,article, footer, header { 
+    margin: 0; 
+    padding: 0; 
+    border: 0; 
+    font: inherit; 
+    font-size: 100%; 
+    vertical-align: baseline; 
+}
+
+html { 
+    line-height: 1; 
+}
+
+a img { 
+    border: none; 
+}
+
+article,footer, header{ 
+    display: block; 
+}
+
+body { 
+    font-family: "Hiragino Kaku Gothic Pro", "ヒラギノ角ゴ Pro W3", "メイリオ", Meiryo, "ＭＳ Ｐゴシック", Helvetica, Arial, Verdana, sans-serif;
+    line-height: 1.2; 
+    background: white; 
+    -webkit-text-size-adjust: 100%; 
+    top:200px;
+}
+
+h1, h2, h3, h4, h5, div.title {
+     font-family: "Warnock Pro", "Goudy Old Style", "Palatino", "Book Antiqua", Georgia, serif; 
+    }
+
+code { 
+    font-family: "Courier New", "Andale Mono", monospace, serif;
+    background: #f8f8f8; padding: 0 .3em; 
+    border: 1px solid #e6e6e6; 
+    -moz-border-radius: 0.2em / 0.2em; 
+    -webkit-border-radius: 0.2em 0.2em; 
+    border-radius: 0.2em / 0.2em; 
+}
+
+div {
+    display: block;
+    top: 200px;
+}
+
+.input {
+    position: relative;
+    overflow: hidden;
+    top: 0px;
+}
+
+fieldset {
+    padding: .5em;
+    /*border: 0.5px solid #999;*/
+    display: block;
+    margin: 0 12px;
+    float: left;
+    display: block;
+}
+.clearfix { 
+    overflow: hidden; 
+    *zoom: 1; 
+}
+
+.center { 
+    text-align: center; 
+}
+
+.right { 
+    text-align: right; 
+}
+
+.wrapped { 
+    margin: 0 auto; 
+    padding: 0 0.5em; 
+    width: 55em; 
+    text-align: left; 
+}
+@media screen and (max-width: 45.5em) { .wrapped { width: auto; } }
+
+header.page-header { 
+    background: white; 
+    border-bottom: 1px solid #dddddd; 
+    margin-bottom: 1em; 
+    -moz-box-shadow: 0px 0px 20px #dddddd; 
+    -webkit-box-shadow: 0px 0px 20px #dddddd; 
+    box-shadow: 0px 0px 20px #dddddd; 
+}
+
+header.page-header .wrapped {
+    padding-top: 1.3em; 
+    padding-bottom: 1.0em; 
+    position: relative; 
+}
+
+header.page-header .wrapped h1 a {
+    display: block; 
+    text-indent: -9999px; 
+    overflow: hidden; 
+    width: 426px; 
+    height: 121px; 
+}
+
+@media screen and (max-width: 568px) { 
+    header.page-header .wrapped h1 a {
+         -moz-background-size: 213px, 60px; 
+         -o-background-size: 213px, 60px; 
+         -webkit-background-size: 213px, 60px; 
+         background-size: 213px, 60px; 
+         width: 213px; 
+         height: 60px; 
+        }
+    }
+ 
+div#entry { 
+    position: relative; 
+}
+
+@media screen and (max-width: 568px) { 
+    div#entry { 
+        padding-top: 250px; 
+    } 
+}
+
+div.entry-body { 
+    margin-top: 1.8em; 
+    margin-bottom: 2em; 
+}
+
+article header { 
+    padding-top: 1.8em; 
+    margin-bottom: 1em; 
+}
+
+article header h1 { 
+    margin: .25em 0 .2em 0; 
+    text-shadow: 0.03em 0 0.08em #cccccc; 
+    font-size: 2.4em; 
+    font-weight: normal; 
+    color: black; 
+    text-decoration: none; 
+}
+
+@media screen and (max-width: 568px) { 
+    article header h1 {
+         font-size: 1.8em; 
+        } 
+    }
