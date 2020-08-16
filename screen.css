@@ -30,6 +30,7 @@ body {
 
 h1, h2, h3, h4, h5, div.title {
      font-family: "Warnock Pro", "Goudy Old Style", "Palatino", "Book Antiqua", Georgia, serif; 
+     text-align: center;
     }
 
 code { 
