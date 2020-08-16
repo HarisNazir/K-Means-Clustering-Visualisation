@@ -6,6 +6,7 @@
 	<meta http-equiv="content-type" content="text/html; charset=utf-8" />
 	<title>K-Means Visualiser</title>
 	<link rel="stylesheet" href="screen.css" type="text/css" />
+	<!-- 
 	<link rel="shortcut icon" type="image/x-icon" href="/favicon.ico" />
 	<meta property="og:title" content="Visualizing K-Means algorithm with D3.js"/>
 	<meta property="og:url" content="http://tech.nitoyon.com/en/blog/2013/11/07/k-means/"/>
@@ -13,48 +14,54 @@
 	<meta property="og:description" content="The K-Means algorithm is a popular and simple clustering algorithm. This visualization shows you how it works.Step RestartN (the number of node):K (the number of cluster):NewClick figure or push [Step] button to go to next step.Push [Restart] button to go..."/>
 	<meta property="og:image" content="http://farm8.staticflickr.com/7316/10710273026_68972312f0_o.jpg"/>
 	<meta property="og:site_name" content="TECH-NI Blog"/>
-	<meta property="fb:admins" content="1297551349" />
+	<meta property="fb:admins" content="1297551349" /> -->
 	<meta name="viewport" content="width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no">
 </head>
 <body class="en">
 <div class="wrap">
 <div class="wrapped">
-
-
 <article>
-<header>
-<h1>K-Means Visualiser</h1>
-</header>
+	<header>
+		<h1>K-Means Visualiser</h1>
+	</header>
 
 <div class="entry-body">
-<section>
-<p>The K-Means algorithm is a popular and simple clustering algorithm. This visualization shows you how it works. Full credit for the original post <a href="http://tech.nitoyon.com/en/blog/2013/11/07/k-means/">here</a></p>
 
-<div id="kmeans">
-<div><svg></svg></div>
-<div><input type="checkbox" name="manual" onchange="javascript: manual(this);"/>Place Starting Positions Manually</div>
-<div><button id="step">Step</button> <button id="restart" disabled>Restart</button> <button id="run">Run</button></div>
-<fieldset style="display: inline; margin: .8em 0 1em 0; border: 1px solid #999; padding: .5em">
-<div><label for="N">N (the number of node):</label><input type="number" id="N" min="2" max="1000" value="100"></div>
-<div><label for="K">K (the number of cluster):</label><input type="number" id="K" min="2" max="50" value="5"></div>
-<div><label for="C">Draw Centroids: </label><input type="checkbox" id="centroids" onchange="javascript:centroids(this);"></div>
-<div><button id="reset">New</button></div>
-</fieldset>
+	<section>
+
+		<div class ="input">
+
+		<fieldset>
+			<div><label for="N">N (the number of node):</label><input type="number" id="N" min="2" max="1000" value="100"></div>
+		</fieldset>
+
+		<fieldset>
+			<div><label for="K">K (the number of cluster):</label><input type="number" id="K" min="2" max="50" value="5"></div>
+		</fieldset>
+
+		<fieldset>
+			<div><label for="C">Draw Centroids: </label><input type="checkbox" id="centroids" onchange="javascript:centroids(this);"></div>
+		</fieldset> 
+
+		<div><button id="reset">New Selection</button></div>
+
+		</div> 
+
+		<div id="kmeans"><div>
+		<svg></svg>
+		</div>
+
+		<div><input type="checkbox" name="manual" onchange="javascript: manual(this);"/>Place Starting Positions Manually</div> <!-- Is this needed?-->
+		<div><button id="step">Step</button> <button id="restart" disabled>Restart</button> <button id="run">Run</button></div>
+
+		</div> 
+
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/d3/3.5.6/d3.js" charset="utf-8"></script>
+	<script src="k-means.js"></script>
+
 </div>
-
-<script src="https://cdnjs.cloudflare.com/ajax/libs/d3/3.5.6/d3.js" charset="utf-8"></script>
-
-<script src="k-means.js"></script>
-
-</div>
-
-
 </article>
-
 </div>
 </div>
-
-
-
 </body>
 </html>

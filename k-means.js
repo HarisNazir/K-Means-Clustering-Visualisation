@@ -8,7 +8,7 @@ var svg = d3.select("#kmeans svg")
 .attr('width', WIDTH)
 .attr('height', HEIGHT)
 .style('padding', '10px')
-.style('background', '#223344')
+.style('background', '#ADB5BD') //change background colour 
 .style('cursor', 'pointer')
 .style('-webkit-user-select', 'none')
 .style('-khtml-user-select', 'none')
@@ -213,7 +213,7 @@ function draw() {
         .duration(500)
         .attr('cx', function(d) { return d.x; })
         .attr('cy', function(d) { return d.y; })
-        .attr('fill', function(d) { return d.group ? d.group.color : '#ffffff'; })
+        .attr('fill', function(d) { return d.group ? d.group.color : '#ffffff'; }) // change colour of dots 
         .attr('r', 5);
 
     if (dots[0].group) {
