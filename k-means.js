@@ -4,6 +4,7 @@ var HEIGHT = Math.max(300, WIDTH * .7);
 var manualPlacement = false;
 var placingFinished = false;
 var drawCentroids = false;
+
 var svg = d3.select("#kmeans svg")
 .attr('width', WIDTH)
 .attr('height', HEIGHT)
@@ -33,20 +34,29 @@ var lineg = svg.append('g');
 var dotg = svg.append('g');
 var centerg = svg.append('g');
 d3
+
 d3.select("#step")
 .on('click', function() { 
     step(); draw(); 
 });
 d3.select("#run").
-on('click', function() { startRun(); });
+on('click', function() { 
+    startRun(); 
+});
 d3.select("#restart")
-.on('click', function() { restart(); draw(); });
+.on('click', function() { 
+    restart(); draw(); 
+});
 d3.select("#reset")
-.on('click', function() { init(); draw(); });
+.on('click', function() { 
+    init(); draw(); 
+});
+
 var groups_old = [];
 var groups = [], dots = [];
 var firstRun = true;
 var inter;
+
 function startRun() {
     $("#run").prop("disabled", true);
     $("#step").prop("disabled", true);
