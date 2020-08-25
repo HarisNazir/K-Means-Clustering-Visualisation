@@ -5,6 +5,17 @@ var manualPlacement = false;
 var placingFinished = false;
 var drawCentroids = false;
 
+
+d3.csv("data/Mall_Customers.csv", function(data){
+    for (var i = 0; i < data.length; i++){
+        console.log("CustomerID: " + data[i].CustomerID);
+        console.log("Gender: " + data[i].Gender);
+        console.log("Age: " + data[i].Age);
+        console.log("Annual Income (k$): " + data[i].Annual_Income);
+        console.log("Spending Score (1-100): " + data[i].Spending_Score);
+    }
+});
+
 var svg = d3.select("#kmeans svg")
 .attr('width', WIDTH)
 .attr('height', HEIGHT)

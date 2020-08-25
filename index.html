@@ -9,50 +9,49 @@
 	<meta name="viewport" content="width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no">
 </head>
 <body class="en">
-<div class="wrap">
-<div class="wrapped">
-<article>
-	<header>
-		<h1> K-Means Clustering Algorithm </h1>
-	</header>
+	<div class="wrap">
+		<div class="wrapped">
+			<article>
+				<header>
+					<h1> K-Means Clustering Algorithm </h1>
+				</header>
 
-<div class="entry-body">
+				<div class="entry-body">
 
-	<section>
+					<section>
 
-		<div class ="input">
+						<div class ="input">
 
-		<fieldset>
-			<div><label for="N">N (the number of node):</label><input type="number" id="N" min="2" max="1000" value="100"></div>
-		</fieldset>
+						<fieldset>
+							<div><label for="N">N (the number of node):</label><input type="number" id="N" min="2" max="1000" value="100"></div>
+						</fieldset>
 
-		<fieldset>
-			<div><label for="K">K (the number of cluster):</label><input type="number" id="K" min="2" max="50" value="5"></div>
-		</fieldset>
+						<fieldset>
+							<div><label for="K">K (the number of cluster):</label><input type="number" id="K" min="2" max="50" value="5"></div>
+						</fieldset>
 
-		<fieldset>
-			<div><label for="C">Draw Centroids: </label><input type="checkbox" id="centroids" onchange="javascript:centroids(this);"></div>
-		</fieldset> 
+						<fieldset>
+							<div><label for="C">Draw Centroids: </label><input type="checkbox" id="centroids" onchange="javascript:centroids(this);"></div>
+						</fieldset> 
 
-		<div><button id="reset">New Selection</button></div>
+						<div><button id="reset">New Selection</button></div>
 
-		</div> 
+						</div> 
 
-		<div id="kmeans"><div>
-		<svg></svg>
+						<div id="kmeans"><div>
+						<svg></svg>
+						</div>
+
+						<div><input type="checkbox" name="manual" onchange="javascript: manual(this);"/>Place Starting Positions Manually</div> <!-- Is this needed?-->
+						<div><button id="step">Step</button> <button id="restart" disabled>Restart</button> <button id="run">Run</button></div>
+
+						</div> 
+
+					<script src="https://cdnjs.cloudflare.com/ajax/libs/d3/3.5.6/d3.js" charset="utf-8"></script>
+					<script src="k-means.js"></script>
+				</div>
+			</article>
 		</div>
-
-		<div><input type="checkbox" name="manual" onchange="javascript: manual(this);"/>Place Starting Positions Manually</div> <!-- Is this needed?-->
-		<div><button id="step">Step</button> <button id="restart" disabled>Restart</button> <button id="run">Run</button></div>
-
-		</div> 
-
-	<script src="https://cdnjs.cloudflare.com/ajax/libs/d3/3.5.6/d3.js" charset="utf-8"></script>
-	<script src="k-means.js"></script>
-
-</div>
-</article>
-</div>
-</div>
+	</div>
 </body>
 </html>
