@@ -6,75 +6,41 @@
 	<meta http-equiv="content-type" content="text/html; charset=utf-8" />
 	<title> K-Means Visualiser </title>
 	<meta name="viewport" content="width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no">
-	
+	<link rel="stylesheet" href="screen.css">
 	
 </head>
 <body>
-<div id="my_dataviz"></div>
+  <div id="background">
+    <div id="title">
+      <h1>K-Means Clustering Visualiser</h1>
+    </div>
+      <div id="my_dataviz"></div>
+      <script src="k-means.js"></script>
+    
+    <div class ="input">
 
-<script>
+						<fieldset>
+							<div><label for="N">N (the number of node):</label><input type="number" id="N" min="2" max="1000" value="100"></div>
+						</fieldset>
 
-// set the dimensions and margins of the graph
-var margin = {top: 10, right: 30, bottom: 30, left: 60},
-    width = 460 - margin.left - margin.right,
-    height = 400 - margin.top - margin.bottom;
-    // append the svg object to the body of the page
-    var svg = d3.select("#my_dataviz")
-      .append("svg")
-        .attr("width", width + margin.left + margin.right)
-        .attr("height", height + margin.top + margin.bottom)
-      .append("g")
-        .attr("transform",
-              "translate(" + margin.left + "," + margin.top + ")")
+						<fieldset>
+							<div><label for="K">K (the number of cluster):</label><input type="number" id="K" min="2" max="50" value="5"></div>
+						</fieldset>
 
-//Read the data
-d3.csv("data/Mall_Customers.csv", function(data) {
+						<fieldset>
+							<div><label for="C">Draw Centroids: </label><input type="checkbox" id="centroids" onchange="javascript:centroids(this);"></div>
+						</fieldset> 
 
-  // Add X axis
-  var x = d3.scaleLinear()
-    .domain([0, 0])
-    .range([ 0, width ]);
-  svg.append("g")
-    .attr("class", "myXaxis")   // Note that here we give a class to the X axis, to be able to call it later and modify it
-    .attr("transform", "translate(0," + height + ")")
-    .call(d3.axisBottom(x))
-    .attr("opacity", "0")
+						<div><button id="reset">New Selection</button></div>
 
-  // Add Y axis
-  var y = d3.scaleLinear()
-    .domain([0, 500000])
-    .range([ height, 0]);
-  svg.append("g")
-    .call(d3.axisLeft(y));
+						</div> 
+            <div class="centroids">
+              <div><input type="checkbox" name="manual" onchange="javascript: manual(this);"/>Place Starting Positions Manually</div> <!-- Is this needed?-->
+              <div><button id="step">Step</button> <button id="restart" disabled>Restart</button> <button id="run">Run</button></div>
+            </div>
+    </div> 
 
-  // Add dots
-  svg.append('g')
-    .selectAll("dot")
-    .data(data)
-    .enter()
-    .append("circle")
-      .attr("cx", function (d) { return x(d.Age); } )
-      .attr("cy", function (d) { return y(d.Spending_Score); } )
-      .attr("r", 1.5)
-      .style("fill", "#69b3a2")
 
-  // new X axis
-  x.domain([0, 4000])
-  svg.select(".myXaxis")
-    .transition()
-    .duration(2000)
-    .attr("opacity", "1")
-    .call(d3.axisBottom(x));
-
-  svg.selectAll("circle")
-    .transition()
-    .delay(function(d,i){return(i*3)})
-    .duration(2000)
-    .attr("cx", function (d) { return x(d.Age); } )
-    .attr("cy", function (d) { return y(d.Spending_Score); } )
-})
-
-</script>
-
+  </div>
 </body>
 </html>
