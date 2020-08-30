@@ -16,6 +16,7 @@ d3.csv("data/Mall_Customers.csv", function(data){
     }
 });
 
+
 var svg = d3.select("#kmeans svg")
 .attr('width', WIDTH)
 .attr('height', HEIGHT)
