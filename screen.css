@@ -8,6 +8,8 @@ html, body, div, h1, h2, center,fieldset, label, caption,article, footer, header
     vertical-align: baseline; 
 }
 
+
+
 html { 
     line-height: 1; 
 }
@@ -26,6 +28,28 @@ body {
     background: white; 
     -webkit-text-size-adjust: 100%; 
     top:200px;
+}
+
+.header{
+    padding-top:20px;
+    padding-bottom: -100000000px;
+}
+
+header{
+    background: #ECECEC;
+    height: 100px;
+    width: 100vw;
+}
+
+.title{
+    font-weight: 700;
+    color: #454B63;
+    padding-top: 10px;
+    font-size: 30px;
+}
+
+.navbar{
+    padding-top: -1000000px;
 }
 
 h1, h2, h3, h4, h5, div.title {
@@ -75,10 +99,12 @@ fieldset {
 }
 
 .wrapped { 
-    margin: 0 auto; 
     padding: 0 0.5em; 
     width: 55em; 
-    text-align: left; 
+    text-align: center;
+    justify-items: center;
+    width:100vw;
+    height:100vh;
 }
 @media screen and (max-width: 45.5em) { .wrapped { width: auto; } }
 
