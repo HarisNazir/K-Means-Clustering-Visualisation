@@ -13,51 +13,129 @@
 	<header>
 		<h1 class="title"> K-Means Clustering Algorithm </h1>
 		</br>
-		<h2 class="navbar"><a href="">Information</a> | <a href="#wrap">Visualisation</a></h2>
+		<h2 class="navbar"><a href="#information">Information</a> | <a href="#wrap">Visualisation</a></h2>
 	</header>
 </div>
-	<div class="wrap">
+	<div id="wrap">
 		<div class="wrapped">
 			<article>
-				
-
 				<div class="entry-body">
 
 					<section>
-
-					
 						<div class ="input">
+							<fieldset>
+								<div><label for="N">N (the number of node):</label><input type="number" id="N" min="2" max="1000" value="100"></div>
+							</fieldset>
 
-						<fieldset>
-							<div><label for="N">N (the number of node):</label><input type="number" id="N" min="2" max="1000" value="100"></div>
-						</fieldset>
+							<fieldset>
+								<div><label for="K">K (the number of cluster):</label><input type="number" id="K" min="2" max="50" value="5"></div>
+							</fieldset>
 
-						<fieldset>
-							<div><label for="K">K (the number of cluster):</label><input type="number" id="K" min="2" max="50" value="5"></div>
-						</fieldset>
+							<fieldset>
+								<div><label for="C">Draw Centroids: </label><input type="checkbox" id="centroids" onchange="javascript:centroids(this);"></div>
+							</fieldset> 
 
-						<fieldset>
-							<div><label for="C">Draw Centroids: </label><input type="checkbox" id="centroids" onchange="javascript:centroids(this);"></div>
-						</fieldset> 
+							<fieldset>
+							<div><input type="checkbox" name="manual" onchange="javascript: manual(this);"/>Place Starting Positions Manually</div> 
+							</fieldset>
 
-						<div><button id="reset">New Selection</button></div>
-
-						</div> 
-
-						<div id="kmeans"><div>
-						<svg></svg>
+							<div><button id="reset">New Selection</button></div>
 						</div>
 
-						<div><input type="checkbox" name="manual" onchange="javascript: manual(this);"/>Place Starting Positions Manually</div> <!-- Is this needed?-->
-						<div><button id="step">Step</button> <button id="restart" disabled>Restart</button> <button id="run">Run</button></div>
-
+						<div>
+							<button id="step">Step</button> 
+							<button id="restart" disabled>Restart</button> 
+							<button id="run">Run</button></div>
+						</div> 
+			
+						<div id="kmeans">
+							<div>
+							<svg></svg>
+							</div>
 						</div> 
 
 					<script src="https://cdnjs.cloudflare.com/ajax/libs/d3/3.5.6/d3.js" charset="utf-8"></script>
 					<script src="k-means.js"></script>
+					
 				</div>
 			</article>
 		</div>
 	</div>
+	</div>
+
+	<div id = "information">
+	<h2> Overview of K Means </h2>
+	<ul> 
+		<li> K Means is one of the simplest yet powerful unsupervised machine learning clustering algorithms.  </li>
+		<li> It is used to find similarities and relationships amongst the set of data that is used and creates clusters. </li>
+	</ul>
+
+	<h2> How does it work? </h2> 
+		<p > It works by creating clusters from a data set. This process involves dividing the entire data into groups based on the patterns in the data set. It is an unsupervised learning algorithm, which means there is no fixed target variable as we don’t have targets to predict. We need to look at the data and make observations and create different clusters.  
+		<p>One way to find the optimal number of clusters include using the elbow method. This is when you plot a line chart including the number of clusters (value of k) and the data. Then you must join the points. When there is a rapid drop in values, the line will create an elbow shape. </p>
+		<p>A target number k is then formed. This will be the number of centroids you need, and it will act as the imaginary locations representing the centre of cluster. The algorithm will then allocate every data point to the nearest cluster, trying to keep centroids as small as possible. </p>
+
+	<h2> The algorithm will halt when: </h2> 
+	<ul> 
+		<li> Centroids stabilise meaning no change in value due to successful clustering. </li>
+		<li> The number of iterations declared has been achieved. </li>
+	</ul>
+
+	<h2> Steps:  </h2> 
+	<ol>
+		<li> Choose number of clusters (k) using elbow method </li>
+		<li> Select k random points from the data as centroids </li>
+		<li> Assign all the points to the closest cluster  </li>
+		<li> Recompute the centroids of newly formed clusters </li>
+		<li> Repeat 3 and 4 until centroids are stable in value and the number of iterations defined are achieved </li>
+	</ol>
+
+	<h2> Why is it used? </h2>
+		<ul> 
+		<li> Customer segmentation – helps divide customers into groups based on common characteristics </li> 
+		<li> Document clustering – will put documents into groups depending on similarities </li> 
+		<li> Image segmentation – will cluster images with similar pixels </li> 
+		<li> Recommendation engines – makes recommendations depending on likes. E.g. songs </li> 
+		</ul>
+
+	<h2> Assumption on how k means works well: </h2>
+		<ul> 
+		<li> Clusters being spherical helps with separating clusters when the data is being analysed and clusters are being formed.</li>
+		<li> Clusters being a similar size helps deciding the boundaries of the clusters and helps calculating the number of data points. </li>
+		</ul>
+	</div> 
+
+	<h2> Definitions </h2>
+	<ul>
+	<li> K Value: the number of centroids you need in a dataset. </li>
+	<li> Elbow Method: heuristic used to determine the number of clusters in a data set. </li>
+	<li> Clustering: A collection of data points that are accumulated together as they have similarities. </li>
+	<li> Centroids: location representing centre of cluster. </li>
+	</ul>
+
+
+<table>
+  <tr>
+    <th>Advantages</th>
+    <th>Disadvantages</th>
+  </tr>
+  <tr>
+    <td>Scales to large data sets. </td>
+    <td>Choosing k manually may take a long time. </td>
+  </tr>
+  <tr>
+    <td>Simple to implement. </td>
+    <td>Being dependent on initial values such the k value. </td>
+  </tr>
+  <tr>
+    <td>Adapts to new examples. </td>
+    <td>Clustering outliers may lead to them getting their own cluster instead of it being ignored. </td>
+  </tr>
+  <tr>
+    <td>Generalizes clusters of different shapes and sizes. </td>
+    <td>Clustering data of varying sizes and density can cause issues. </td>
+  </tr>
+</table>
+
 </body>
 </html>

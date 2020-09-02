@@ -19,9 +19,9 @@ d3.csv("data/Mall_Customers.csv", function(data){
 
 var svg = d3.select("#kmeans svg")
 .attr('width', WIDTH)
-.attr('height', HEIGHT)
-.style('padding', '10px')
-.style('background', '#ADB5BD') //change background colour 
+.attr('height',HEIGHT)
+//.style('padding', '10px')
+.style('background', '#d4d2d2') //change background colour 
 .style('cursor', 'pointer')
 .style('-webkit-user-select', 'none')
 .style('-khtml-user-select', 'none')

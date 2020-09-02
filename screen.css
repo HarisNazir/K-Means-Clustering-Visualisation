@@ -8,8 +8,6 @@ html, body, div, h1, h2, center,fieldset, label, caption,article, footer, header
     vertical-align: baseline; 
 }
 
-
-
 html { 
     line-height: 1; 
 }
@@ -79,11 +77,32 @@ div {
 
 fieldset {
     padding: .5em;
-    /*border: 0.5px solid #999;*/
     display: block;
     margin: 0 12px;
     float: left;
     display: block;
+}
+
+#reset {
+    background-color: #ECECEC;
+    border: none;
+    color: black;
+    display: inline-block;
+    font-size: 16px;
+    cursor: pointer;
+    padding: 10px;
+}
+#step, #restart, #run {
+    background-color: #ECECEC;
+    border: none;
+    color: black;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 4px 2px;
+    cursor: pointer;
 }
 .clearfix { 
     overflow: hidden; 
@@ -97,15 +116,16 @@ fieldset {
 .right { 
     text-align: right; 
 }
-
-.wrapped { 
+ .wrapped {
     padding: 0 0.5em; 
     width: 55em; 
     text-align: center;
     justify-items: center;
     width:100vw;
     height:100vh;
-}
+ }
+
+
 @media screen and (max-width: 45.5em) { .wrapped { width: auto; } }
 
 header.page-header { 
@@ -155,6 +175,8 @@ div#entry {
 div.entry-body { 
     margin-top: 1.8em; 
     margin-bottom: 2em; 
+    padding: 0 0.5em; 
+    text-align: center;
 }
 
 article header { 
