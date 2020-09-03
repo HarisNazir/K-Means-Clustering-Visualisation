@@ -72,7 +72,7 @@
 	</div>
 
 	<div id = "information">
-
+	
 	<div class ="overview">
 	<h2> Overview of K Means </h2>
 	<ul> 
@@ -88,10 +88,12 @@
 		<p>A target number k is then formed. This will be the number of centroids you need, and it will act as the imaginary locations representing the centre of cluster. The algorithm will then allocate every data point to the nearest cluster, trying to keep centroids as small as possible. </p>
 	</div>
 
+
+
 	<div class = "algorithm">
 	<h2> The algorithm will halt when: </h2> 
 	<ul> 
-		<li> Centroids stabilise meaning no change in value due to successful clustering. </li>
+		<li> Centroids stabilise meaning no change in value due to <br>successful clustering. </li>
 		<li> The number of iterations declared has been achieved. </li>
 	</ul>
 	</div>
@@ -103,7 +105,7 @@
 		<li> Select k random points from the data as centroids </li>
 		<li> Assign all the points to the closest cluster  </li>
 		<li> Recompute the centroids of newly formed clusters </li>
-		<li> Repeat 3 and 4 until centroids are stable in value and the number of iterations defined are achieved </li>
+		<li> Repeat 3 and 4 until centroids are stable in value and <br>the number of iterations defined are achieved </li>
 	</ol>
 	</div>
 
@@ -160,6 +162,19 @@
 	</table>
 	</div>
 	</div>
+	<div class ="images"> 
+	<img class ="elbowMethod" src="images/elbowMethod.png" alt="elbow method">
+	<img class ="stages" src="images/stages.png" alt="stages">
+	</div> 
 
+	<div id="tutorial">
+      <h3>K Means Clustering Algorithm Visualisation</h3>
+      <h6>This short tutorial will walk you through all of the features of this application.</h6>
+      <p>If you want to dive right in, feel free to press the "Skip Tutorial" button below. Otherwise, press "Next"!</p>
+  
+      <button id="nextButton" type="button">Next</button>
+      <button id="previousButton" type="button">Previous</button>
+      <button id="skipButton" type="button">Skip Tutorial</button>
+    </div>
 </body>
 </html>

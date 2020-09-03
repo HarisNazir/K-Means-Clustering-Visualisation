@@ -42,7 +42,7 @@ header{
     height: 100px;
     width: 100vw;
 }
-
+/*
 .sticky{
     padding-top: 0px;
     position: fixed;
@@ -53,7 +53,7 @@ header{
 .sticky + .content {
     padding-top: 200px;
   }
-
+*/
 .title{
     font-weight: 700;
     color: #454B63;
@@ -107,7 +107,7 @@ fieldset {
     cursor: pointer;
     padding: 10px;
 }
-#step, #restart, #run {
+#step, #restart, #run , #nextButton, #previousButton, #skipButton{
     background-color: #ECECEC;
     border: none;
     color: black;
@@ -222,24 +222,39 @@ article header h1 {
 #information h2{
     text-align: left;
 }
-    
-/*
-    #tutorial {
-        position: absolute;
-        z-index: 3;
-        background-color: rgba(255, 255, 255, 1);
-        width: 50%;
-        height: 70%;
-        border: 2px solid #34495e;
-        border-radius: 4px;
-        text-align: center;
-        float: right;
-        margin-left: auto;
-        margin-right: auto;
-        margin-top: auto;
-        margin-bottom: auto;
-        bottom: 0;
-        top: 0;
-        left: 0;
-        right: 0;
-    }*/
+
+.elbowMethod {
+    width: 300px;
+    height: 250px;
+    right: 0;
+    top: 970px;
+    position: absolute;
+    margin-right: 10%;
+}
+
+.stages {
+    width: 460px;
+    height: 270px;
+    right: 0;
+    position: absolute;
+    top:1350px;
+    margin-right: 25%;
+    position: absolute;
+    right:0;
+}
+
+
+#tutorial {
+    display: block;
+    position: absolute;   
+    background-color: white;
+    width: 50%;
+    height: 50%;
+    border: 2px solid black;
+    border-radius: 4px;
+    text-align: center;
+    bottom: 0;
+    top: 320px;
+    left: 0;
+    right: 0;
+}
