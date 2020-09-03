@@ -4,7 +4,7 @@ html{
     scroll-behavior: smooth;
 }
 html, body, div, h1, h2, center,fieldset, label, caption,article, footer, header { 
-    margin: 0; 
+    margin: auto;
     padding: 0; 
     border: 0; 
     font: Arial, Helvetica, sans-serif; 
@@ -121,10 +121,10 @@ fieldset {
     text-align: right; 
 }
  .wrapped {
-    width: 55em; 
     text-align: center;
     justify-items: center;
-    width:100vw;
+    width:60%;
+    
  }
 
 
@@ -212,7 +212,6 @@ article header h1 {
     text-align: left;
 }
     
-}
 /*
     #tutorial {
         position: absolute;
