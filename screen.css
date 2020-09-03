@@ -1,4 +1,8 @@
 @charset "UTF-8";
+
+html{
+    scroll-behavior: smooth;
+}
 html, body, div, h1, h2, center,fieldset, label, caption,article, footer, header { 
     margin: 0; 
     padding: 0; 
@@ -196,6 +200,19 @@ article header h1 {
          font-size: 1.8em; 
         } 
     }
+
+#information {
+    margin-left: 5%;
+    margin-right: 30%;
+    padding: 50px;
+
+}
+ 
+#information h2{
+    text-align: left;
+}
+    
+}
 /*
     #tutorial {
         position: absolute;
