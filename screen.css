@@ -3,7 +3,7 @@
 html{
     scroll-behavior: smooth;
 }
-html, body, div, h1, h2, center,fieldset, label, caption,article, footer, header { 
+html, body, div, h1, h2, h3, h6, p, center,fieldset, label, caption,article, footer, header{ 
     margin: auto;
     padding: 0; 
     border: 0; 
@@ -216,7 +216,6 @@ article header h1 {
     margin-left: 5%;
     margin-right: 30%;
     padding: 50px;
-
 }
  
 #information h2{
@@ -227,22 +226,19 @@ article header h1 {
     width: 300px;
     height: 250px;
     right: 0;
-    top: 970px;
+    top: 1100px;
     position: absolute;
-    margin-right: 10%;
+    margin-right: 14%;
 }
-
-.stages {
+.stages1-5 {
     width: 460px;
     height: 270px;
     right: 0;
     position: absolute;
-    top:1350px;
+    top:1400px;
     margin-right: 25%;
-    position: absolute;
     right:0;
 }
-
 
 #tutorial {
     display: block;
@@ -257,4 +253,21 @@ article header h1 {
     top: 320px;
     left: 0;
     right: 0;
+    line-height: 200%;
 }
+
+#tutorial h2, h6, p {
+    padding: 20px;
+}
+#tbuttons {
+    margin-top: 5%;
+    padding: 10px;
+}
+
+table {
+    border-collapse: collapse;
+    border-style: hidden;
+  }
+  table td {
+    border: 2px solid black;
+  }
