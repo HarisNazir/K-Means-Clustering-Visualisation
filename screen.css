@@ -43,6 +43,17 @@ header{
     width: 100vw;
 }
 
+.sticky{
+    padding-top: 0px;
+    position: fixed;
+    top: 0;
+    width: 100%
+}
+
+.sticky + .content {
+    padding-top: 200px;
+  }
+
 .title{
     font-weight: 700;
     color: #454B63;

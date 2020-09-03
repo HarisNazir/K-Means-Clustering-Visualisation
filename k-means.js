@@ -5,8 +5,23 @@ var manualPlacement = false;
 var placingFinished = false;
 var drawCentroids = false;
 
+window.onscroll = function(){
+    scrollFunction()
+};
 
-d3.csv("data/Mall_Customers.csv", function(data){
+var header = document.getElementById("myHeader");
+var sticky = header.offsetTop;
+
+function scrollFunction(){
+    if(window.pageYOffset > sticky){
+        header.classList.add("sticky");
+    }
+    else{
+        header.classList.remove("sticky");
+    }
+}
+
+/*d3.csv("data/Mall_Customers.csv", function(data){
     for (var i = 0; i < data.length; i++){
         console.log("CustomerID: " + data[i].CustomerID);
         console.log("Gender: " + data[i].Gender);
@@ -14,7 +29,7 @@ d3.csv("data/Mall_Customers.csv", function(data){
         console.log("Annual Income (k$): " + data[i].Annual_Income);
         console.log("Spending Score (1-100): " + data[i].Spending_Score);
     }
-});
+});*/
 
 
 var svg = d3.select("#kmeans svg")
