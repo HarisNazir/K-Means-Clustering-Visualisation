@@ -7,7 +7,7 @@ html, body, div, h1, h2, h3, h6, p, center,fieldset, label, caption,article, foo
     margin: auto;
     padding: 0; 
     border: 0; 
-    font: Arial, Helvetica, sans-serif; 
+    font: Arial, sans-serif; 
     font-size: 100%; 
     vertical-align: baseline; 
 }
@@ -25,7 +25,7 @@ article,footer, header{
 }
 
 body { 
-    font-family: "Hiragino Kaku Gothic Pro", "ヒラギノ角ゴ Pro W3", "メイリオ", Meiryo, "ＭＳ Ｐゴシック", Helvetica, Arial, Verdana, sans-serif;
+    font-family: Arial;
     line-height: 1.2; 
     background: white; 
     -webkit-text-size-adjust: 100%; 
@@ -42,6 +42,7 @@ header{
     height: 100px;
     width: 100vw;
     z-index: 99;
+    text-align:center;
 }
 
 .sticky{
@@ -50,6 +51,7 @@ header{
     top: 0;
     width: 100%;
     z-index: 99;
+    text-align:center;
 }
 
 .sticky + .content {
@@ -70,7 +72,7 @@ header{
 
 h1, h2, h3, h4, h5, div.title {
      font-family: Arial, Helvetica, sans-serif; 
-     text-align: center;
+
     }
 
 code { 
@@ -215,38 +217,56 @@ article header h1 {
         } 
     }
 
-#information {
-    margin-left: 5%;
-    margin-right: 30%;
-    padding: 50px;
-}
- 
-#information h2{
-    text-align: left;
+
+#information{
+    margin-left: 20%;
+    margin-right: 20%;
 }
 
-.elbowMethod {
-    width: 300px;
-    height: 250px;
-    right: 0;
-    top: 1100px;
-    position: absolute;
-    margin-right: 14%;
+.informationHeader{
+    padding-top: 20px;
+    text-align: center;
+    font-size: 25px;
+    padding-bottom: 15px;
 }
-.stages1-5 {
-    width: 460px;
-    height: 270px;
-    right: 0;
-    position: absolute;
-    top:1400px;
-    margin-right: 25%;
-    right:0;
+
+.subheading{
+    font-size: 20px;
+    padding-bottom: 5px;
+    padding-top: 10px;
+    maer
 }
 
 table {
+    padding-top: 10px
     border-collapse: collapse;
-    border-style: hidden;
+    border-style: solid;
+    
   }
-  table td {
-    border: 2px solid black;
-  }
+table td {
+border: 2px solid black;
+}
+
+footer{
+    margin-top: 20px;
+    border: black;
+    border-style: solid;
+    text-align:center;
+    font-size: 15px;
+    padding-top: 20px;
+    padding-bottom: 20px;
+}
+
+.stages{
+    width: 500px;
+    float:right;
+    position: relative;
+}
+
+.elbow{
+    width: 375px;
+    float:right;
+    position: relative;
+}
+
+

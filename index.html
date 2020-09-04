@@ -70,101 +70,90 @@
 			</article>
 		</div>
 	</div>
+	<div id="information">
+		<h1 class = "informationHeader">Information</h1>
 
-	<div id = "information">
-	
-	<div class ="overview">
-	<h2> Overview of K Means </h2>
-	<ul> 
-		<li> K Means is one of the simplest yet powerful unsupervised machine learning clustering algorithms.  </li>
-		<li> It is used to find similarities and relationships amongst the set of data that is used and creates clusters. </li>
-	</ul>
-	</div> 
-
-	<div class ="explanation">
-	<h2> How does it work? </h2> 
-		<p > It works by creating clusters from a data set. This process involves dividing the entire data into groups based on the patterns in the data set. It is an unsupervised learning algorithm, which means there is no fixed target variable as we don’t have targets to predict. We need to look at the data and make observations and create different clusters.  
-		<p>One way to find the optimal number of clusters include using the elbow method. This is when you plot a line chart including the number of clusters (value of k) and the data. Then you must join the points. When there is a rapid drop in values, the line will create an elbow shape. </p>
-		<p>A target number k is then formed. This will be the number of centroids you need, and it will act as the imaginary locations representing the centre of cluster. The algorithm will then allocate every data point to the nearest cluster, trying to keep centroids as small as possible. </p>
-	</div>
+		<h2 class="subheading">Overview of K-Means</h2>
+			<ul> 
+				<li> K Means is one of the simplest yet powerful unsupervised machine learning clustering algorithms.  </li>
+				<li> It is used to find similarities and relationships amongst the set of data that is used and creates clusters. </li>
+			</ul>
 
 
+		<h2 class="subheading">How does it work</h2>
+		<img src= "images/elbowMethod.png" alt="Elbow Method" class="elbow">
+			</br>
+			<p> It works by creating clusters from a data set. This process involves dividing the entire data into groups based on the patterns in the data set. It is an unsupervised learning algorithm, which means there is no fixed target variable as we don’t have targets to predict. We need to look at the data and make observations and create different clusters. </p>
+			<br>
+			<p>One way to find the optimal number of clusters include using the elbow method. This is when you plot a line chart including the number of clusters (value of k) and the data. Then you must join the points. When there is a rapid drop in values, the line will create an elbow shape. </p>
+			
+			<br>
+			<p>A target number k is then formed. This will be the number of centroids you need, and it will act as the imaginary locations representing the centre of cluster. The algorithm will then allocate every data point to the nearest cluster, trying to keep centroids as small as possible. </p>
+			<br>
+			<b>The algorithm will halt when:</b>
+			<ul> 
+				<li> Centroids stabilise meaning no change in value due to successful clustering. </li>
+				<li> The number of iterations declared has been achieved. </li>
+			</ul>
 
-	<div class = "algorithm">
-	<h2> The algorithm will halt when: </h2> 
-	<ul> 
-		<li> Centroids stabilise meaning no change in value due to <br>successful clustering. </li>
-		<li> The number of iterations declared has been achieved. </li>
-	</ul>
-	</div>
+		<h2 class="subheading">Steps</h2>
+		<img src= "images/stages1-5.png" alt="Steps" class="stages">
+			<ol>
+				<li> Choose number of clusters (k) using elbow method </li>
+				<li> Select k random points from the data as centroids </li>
+				<li> Assign all the points to the closest cluster  </li>
+				<li> Recompute the centroids of newly formed clusters </li>
+				<li> Repeat 3 and 4 until centroids are stable in value and the number of iterations defined are achieved </li>
+			</ol>
+			
 
-	<div class ="steps">
-	<h2> Steps:  </h2> 
-	<ol>
-		<li> Choose number of clusters (k) using elbow method </li>
-		<li> Select k random points from the data as centroids </li>
-		<li> Assign all the points to the closest cluster  </li>
-		<li> Recompute the centroids of newly formed clusters </li>
-		<li> Repeat 3 and 4 until centroids are stable in value and <br>the number of iterations defined are achieved </li>
-	</ol>
-	</div>
+		<h2 class="subheading">Why is it used</h2>
+			<ul> 
+				<li> <b>Customer segmentation </b> – helps divide customers into groups based on common characteristics </li> 
+				<li> <b> Document clustering </b> – will put documents into groups depending on similarities </li> 
+				<li> <b> Image segmentation </b> – will cluster images with similar pixels </li> 
+				<li> <b> Recommendation engines </b> – makes recommendations depending on likes. E.g. songs </li> 
+			</ul>
 
-	<div class="application">
-	<h2> Why is it used? </h2>
+		<h2 class="subheading">Assumptions on how K Means Works</h2>
 		<ul> 
-		<li> <b>Customer segmentation </b> – helps divide customers into groups based on common characteristics </li> 
-		<li> <b> Document clustering </b> – will put documents into groups depending on similarities </li> 
-		<li> <b> Image segmentation </b> – will cluster images with similar pixels </li> 
-		<li> <b> Recommendation engines </b> – makes recommendations depending on likes. E.g. songs </li> 
+			<li> Clusters being spherical helps with separating clusters when the data is being analysed and clusters are being formed.</li>
+			<li> Clusters being a similar size helps deciding the boundaries of the clusters and helps calculating the number of data points. </li>
 		</ul>
-	</div>
 
-	<div class ="assumptions">
-	<h2> Assumption on how k means works well: </h2>
-		<ul> 
-		<li> Clusters being spherical helps with separating clusters when the data is being analysed and clusters are being formed.</li>
-		<li> Clusters being a similar size helps deciding the boundaries of the clusters and helps calculating the number of data points. </li>
-		</ul>
-	</div> 
+		<h2 class="subheading">Definitions</h2>
+			<ul>
+				<li> <b> K Value: </b> the number of centroids you need in a dataset. </li>
+				<li> <b> Elbow Method: </b> heuristic used to determine the number of clusters in a data set. </li>
+				<li> <b> Clustering: </b> A collection of data points that are accumulated together as they have similarities. </li>
+				<li> <b> Centroids: </b> location representing centre of cluster. </li>
+			</ul>
 
-	<div  class ="definition">
-	<h2> Definitions </h2>
-	<ul>
-	<li> <b> K Value: </b> the number of centroids you need in a dataset. </li>
-	<li> <b> Elbow Method: </b> heuristic used to determine the number of clusters in a data set. </li>
-	<li> <b> Clustering: </b> A collection of data points that are accumulated together as they have similarities. </li>
-	<li> <b> Centroids: </b> location representing centre of cluster. </li>
-	</ul>
+		<table>
+			<tr>
+					<th>Advantages</th>
+					<th>Disadvantages</th>
+				</tr>
+				<tr>
+					<td>Scales to large data sets. </td>
+					<td>Choosing k manually may take a long time. </td>
+				</tr>
+				<tr>
+					<td>Simple to implement. </td>
+					<td>Being dependent on initial values such the k value. </td>
+				</tr>
+				<tr>
+					<td>Adapts to new examples. </td>
+					<td>Clustering outliers may lead to them getting their own cluster instead of it being ignored. </td>
+				</tr>
+				<tr>
+					<td>Generalizes clusters of different shapes and sizes. </td>
+					<td>Clustering data of varying sizes and density can cause issues. </td>
+				</tr>
+		</table>
 	</div>
-
-	<div class = "table">
-	<table>
-	<tr>
-		<th>Advantages</th>
-		<th>Disadvantages</th>
-	</tr>
-	<tr>
-		<td>Scales to large data sets. </td>
-		<td>Choosing k manually may take a long time. </td>
-	</tr>
-	<tr>
-		<td>Simple to implement. </td>
-		<td>Being dependent on initial values such the k value. </td>
-	</tr>
-	<tr>
-		<td>Adapts to new examples. </td>
-		<td>Clustering outliers may lead to them getting <br> their own cluster instead of it being ignored. </td>
-	</tr>
-	<tr>
-		<td>Generalizes clusters of different shapes <br> and sizes. </td>
-		<td>Clustering data of varying sizes and density can <br> cause issues. </td>
-	</tr>
-	</table>
-	</div>
-	</div>
-	<div class ="images"> 
-	<img class ="elbowMethod" src="images/elbowMethod.png" alt="elbow method">
-	<img class ="stages1-5" src="images/stages1-5.png" alt="stages">
-	</div> 
+	<footer>
+		Copyright (C): Haris Nazir & Rozerin Baran 2020
+	</footer>
 </body>
 </html>
