@@ -243,31 +243,6 @@ article header h1 {
     right:0;
 }
 
-#tutorial {
-    display: block;
-    position: absolute;   
-    background-color: white;
-    width: 50%;
-    height: 50%;
-    border: 2px solid black;
-    border-radius: 4px;
-    text-align: center;
-    bottom: 0;
-    top: 320px;
-    left: 0;
-    right: 0;
-    line-height: 200%;
-    font-family: sans-serif;
-}
-
-#tutorial h2, h6, p {
-    padding: 20px;
-}
-#tbuttons {
-    margin-top: 5%;
-    padding: 10px;
-}
-
 table {
     border-collapse: collapse;
     border-style: hidden;
