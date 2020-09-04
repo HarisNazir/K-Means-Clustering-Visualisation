@@ -12,4 +12,4 @@ To create a platform where users can input the number of clusters they want and 
     - User Input the value of K
     - User will be shown a visualisation of the data
 
-![Gantt](img/Timeline.jpg)
+View a Live Demo: https://harisnazir.github.io/K-Means-Clustering-Visualisation/
