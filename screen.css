@@ -41,19 +41,22 @@ header{
     background: #ECECEC;
     height: 100px;
     width: 100vw;
+    z-index: 99;
 }
-/*
+
 .sticky{
     padding-top: 0px;
     position: fixed;
     top: 0;
-    width: 100%
+    width: 100%;
+    z-index: 99;
 }
 
 .sticky + .content {
     padding-top: 200px;
+    z-index: 99;
   }
-*/
+
 .title{
     font-weight: 700;
     color: #454B63;
