@@ -257,6 +257,7 @@ article header h1 {
     left: 0;
     right: 0;
     line-height: 200%;
+    font-family: sans-serif;
 }
 
 #tutorial h2, h6, p {
